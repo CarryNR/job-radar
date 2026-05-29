@@ -8,6 +8,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 sys.path.insert(0, os.path.dirname(__file__))
 
+from adapters.baidu import BaiduAdapter
+from adapters.jd import JDAdapter
 from adapters.tencent import TencentAdapter
 from pipeline.dedup import run_adapter
 
@@ -16,7 +18,7 @@ DATABASE_URL = os.getenv(
 )
 SCHEDULE_HOUR = int(os.getenv("CRAWLER_SCHEDULE_HOUR", "2"))
 
-ADAPTERS = [TencentAdapter]
+ADAPTERS = [TencentAdapter, BaiduAdapter, JDAdapter]
 
 
 async def crawl_all():

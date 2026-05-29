@@ -18,6 +18,14 @@ docker compose exec backend python scripts/seed.py
 # 4. 访问
 # 前端: http://localhost:3000
 # API:  http://localhost:8000/docs
+
+## 已接入数据源
+
+| Adapter | 来源 | 说明 |
+|---------|------|------|
+| TencentAdapter | careers.tencent.com | 社招公开 API |
+| BaiduAdapter | talent.baidu.com | 社招（SOCIAL） |
+| JDAdapter | campus.jd.com | 校招/实习公开 API |
 ```
 
 ## 启动爬虫（可选）
